@@ -296,7 +296,7 @@
         <div class="feature-card">
           <div class="feature-icon"><i class="fas fa-headset"></i></div>
           <h3>લાઇવ ચેટ સપોર્ટ</h3>
-          <p>કોઈ પણ સમય પૂછો અને જાણો</p>
+          <p>કોઈ પણ સમય પ્રશ્ન કરો અને મદદ મેળવો</p>
         </div>
       </div>
     </div>
@@ -312,7 +312,7 @@
         </div>
         <div>
           <h3 style="color:var(--primary); margin-bottom:15px; font-size:1.5rem;">The Bake House</h3>
-          <p style="margin-bottom:15px;">The Bake House એ Mota Varachha, Surat માં આવેલું એક લોકપ્રિય બેકરી અને કેફે છે. અમે તાજી, સ્વાદિષ્ટ અને કસ્ટમાઇઝ્ડ કેક, પેસ્ટ્રી અને કોફીની સેવા આપીએ છીએ. અમારી પ્રાથમિકતામાં ગુણવત્તા અને ગ્રાહક સંતુષ્ટિ છે.</p>
+          <p style="margin-bottom:15px;">The Bake House એ Mota Varachha, Surat માં આવેલું લોકપ્રિય બેકરી અને કેફે છે. આપણે તાજી અને સ્વાદિષ્ટ કેક, પેસ્ટ્રી અને કોફી બનાવીએ છીએ અને કસ્ટમ ઓર્ડર્સ પણ લેતા હોઈએ છે. ગુણવત્તા અને ગ્રાહક સantuષ્ટિ અમારી પ્રાથમિકતા છે.</p>
           <h4 style="color:var(--primary); margin:20px 0 10px 0;">📞 આપણીને સંપર્ક કરો</h4>
           <p>
             <strong>ફોન:</strong> <a href="tel:+918160585664" style="color:var(--accent); text-decoration:none;">+91 81605 85664</a><br>
@@ -410,10 +410,9 @@
 
   <!-- Script -->
   <script>
-    // Fixed, complete menu data
     const menuItems = [
       { id: 1, name: 'ચોકલેટ કેક', category: 'cakes', price: 450, desc: 'સ્વાદિષ્ટ ચોકલેટ કેક', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=60' },
-      { id: 2, name: 'વનિલા કેક', category: 'cakes', price: 380, desc: 'સોને્ગત વનિલા સ્પોંજ', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=60' },
+      { id: 2, name: 'વનિલા કેક', category: 'cakes', price: 380, desc: 'સ્વાદિષ્ટ વનિલા સ્પોંજ', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=60' },
       { id: 3, name: 'બેલ્જિયન પેસ્ટ્રી', category: 'pastry', price: 120, desc: 'પ્રિમિયમ પેસ્ટ્રી', image: 'https://images.unsplash.com/photo-1541745537410-8b1d2c8ae3d8?w=800&auto=format&fit=crop&q=60' },
       { id: 4, name: 'ક્રોસેન્ટ', category: 'pastry', price: 80, desc: 'તાજો ક્રોસેન્ટ', image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&auto=format&fit=crop&q=60' },
       { id: 5, name: 'કેપ્પુચીનો', category: 'coffee', price: 150, desc: 'ગરમ અને સ્વાદિષ્ટ', image: 'https://images.unsplash.com/photo-1495521821757-cf9d6e5b4b2a?w=800&auto=format&fit=crop&q=60' },
@@ -518,9 +517,7 @@
     function placeOrder(e) {
       e.preventDefault();
       if (cart.length === 0) { alert('તમારો કાર્ટ ખાલી છે'); return; }
-      // In real app, send order to backend. Here we simulate.
       const name = document.getElementById('userName').value;
-      const phone = document.getElementById('userPhone').value;
       alert('આભાર, ' + name + '! તમારો ઓર્ડર મળ્યો છે. અમે તાત્કાલિક સંપર્ક કરીશું.');
       cart = []; saveCart(); updateCartUI(); closeCheckoutModal();
     }
